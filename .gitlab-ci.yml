@@ -1,0 +1,23 @@
+stages:
+  - install
+  - test
+
+# Install dependencies (Node.js, npm, Cypress)
+install:
+  image: node:16  # Use official Node.js image
+  stage: install
+  script:
+    - npm install  # Install all dependencies, including Cypress
+  cache:
+    paths:
+      - node_modules/  # Cache node_modules to avoid re-installing on each pipeline run
+
+# Cypress test execution
+cypress-test:
+  image: cypress/included:13.16.0  # Use Cypress image with all dependencies included
+  stage: test
+  script:
+    - echo "Running Cypress tests"
+    - DEBUG=cypress:* npx cypress run  # Run the Cypress tests
+  only:
+    - main  # Run only on branches, adjust as necessary

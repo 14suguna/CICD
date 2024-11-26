@@ -1,0 +1,16 @@
+{
+  "name": "learning2024",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "axe-core": "^4.10.2",
+    "cypress": "^13.16.0",
+    "cypress-axe": "^1.5.0"
+  }
+}

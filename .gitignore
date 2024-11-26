@@ -1,0 +1,17 @@
+# Cypress specific
+cypress/screenshots/
+cypress/videos/
+cypress/logs/
+
+# Node.js dependencies
+node_modules/
+
+# Cypress cache
+.cache/
+
+# Environment files (if any)
+.env
+
+# Operating system files
+.DS_Store   # For macOS
+Thumbs.db   # For Windows
